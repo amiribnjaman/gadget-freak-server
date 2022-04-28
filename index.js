@@ -34,6 +34,12 @@ async function run() {
         //     res.send({ token })
         // })
 
+
+        //  testing 
+        app.get('/hero', (req, res) => {
+            res.send('hero meets with hero')
+        })
+
         app.post('/login', (req, res) => {
             const secret_key = 'IMJU7hS1IEmodbUM/2C30FeNJWY+Ee/YPwFPO5qpnaOS8gPzo6rbeWcTJYgx/dAZ7Iu/lH2N+6kL6S86zz2V33MwMZ3shJrOaYAcTxUw3FGjahJfclfa2nW5z7/zP1P6ltxf1y77ww9JYn4w4yuq4ATAjUbQGJPyrV8RymsW+v1LgZwPWDdYoizh/UBOvyz0nlwXoHSTnYKU1dPmNa8XFTyCAYZdtpQC0zR0NwF14zDIdubIAibNdaQQevYsc8pnJWgccOyFcGRkCE8hy1GQC4L0mhfryHTL5OM9eT6RzROhKKIA7zhHB2kRNcKNZ2k+O1/zL4Wumiu/TQK33G47Eg=='
             const email = req.body
@@ -42,6 +48,7 @@ async function run() {
             res.send({ token })
 
         })
+
 
         app.post("/uploadPd", async (req, res) => {
             const product = req.body;
